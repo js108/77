@@ -30,7 +30,7 @@ body.css("span:contains('#{op}')").each { |node|
 #impliment infos
 body.css(".op").each { |node| node.content = username}
 subtitle = "<div class='site-subtitle'>#{subtitletext}</div>"
-footer = "<div class='footer'>Built with <a href='https://github.com/js108/77'>77</a> The World's Most Advanced Comunication Platform</div>"
+footer = "<div class='footer'>Built with <a href='https://github.com/js108/77'>77</a> The Most Advanced Comunication Platform</div>"
 
 #wrap posts that are by the op and have underlined text in a blog class to show theyre the post
 body.xpath("//div[@class='message' and .//u and .//span[@class='op']]").each { |node| node["class"] = 'blog' }

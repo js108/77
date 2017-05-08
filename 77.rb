@@ -27,32 +27,6 @@ body.css("span:contains('#{op},')").each { |node|
   end
 }
 
-
-=begin
-body.css(".name").each { |node|
-if node == op
-  node['class'] = 'op' 
-end
-}
-
-
-#puts rando
-
-
-
-body.css(".name").each { |node|
-if node == op
-  puts node
-end
-}
-
-dude.each { |node| 
-  if node['class'] == 'name'
-    node['class'] = 'op' 
-  end
-}
-=end
-
 #impliment infos
 body.css(".op").each { |node| node.content = username}
 subtitle = "<div class='site-subtitle'>#{subtitletext}</div>"

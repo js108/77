@@ -6,7 +6,7 @@ username = "Joe"
 subtitletext = "It's Extremely Advanced Actually"
 
 #scrape page
-page = Nokogiri::HTML(open('http://www.ilxor.com/ILX/ThreadSelectedControllerServlet?boardid=40&threadid=105715'))
+page = Nokogiri::HTML(open('http://www.ilxor.com/ILX/ThreadSelectedControllerServlet?boardid=40&threadid=105715&action=showall'))
 
 #clean up html for ideal blogging
 title = page.css(".headingblock h1")

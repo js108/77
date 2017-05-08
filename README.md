@@ -6,4 +6,6 @@ Ilxor posts by the thread starter with underlines will be a new post, and posts 
 
 Alls you have to do to prep the script is insert the url into line 9 and put a username and subtitle in lines 5 and 6. Then you can put it on a server and run a cron job or whatever.
 
+Do whatever you want to the css I GUESS even tho it was made by a professional designer ME.
+
 :]

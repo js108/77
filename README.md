@@ -1,3 +1,5 @@
+#77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77
+
 This is a ruby script that takes a thread from the http://www.ilxor.com message board and turns it into a blog lol. 
 
 An example of this high tech approach can be found when we use it to turn [this thread](http://www.ilxor.com/ILX/ThreadSelectedControllerServlet?boardid=40&threadid=105715) in to [this blog](http://scoopsnoodle.com/77/).

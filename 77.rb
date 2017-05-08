@@ -19,6 +19,32 @@ body.css("form").remove_attr('action')
 body.css("form").remove_attr('method')
 body.css('.name a').each { |node| node.replace(node.children) }
 
+
+
+op = body.css(".name").first.to_s
+all = body.css(".name")
+
+all.each { |node|
+  if node.to_s == op
+      if node['class'] == 'name'
+        node['class'] = 'op'
+      end
+  end
+}
+
+
+=begin
+if op.is_a? String 
+  puts "string"
+else
+  puts "not"
+end
+
+strop = op.to_s
+
+puts strop
+
+
 #change original posters signature class from name to op
 op = body.css(".name").first
 op = op.text
@@ -27,6 +53,7 @@ body.css("span:contains('― #{op},')").each { |node|
     node.first_element_child['class'] = 'op' 
   end
 }
+=end
 
 #impliment infos
 body.css(".op").each { |node| node.content = username}

@@ -20,10 +20,9 @@ body.css("form").remove_attr('method')
 body.css('.name a').each { |node| node.replace(node.children) }
 
 
-
+#change original posters class from name to op
 op = body.css(".name").first.to_s
 all = body.css(".name")
-
 all.each { |node|
   if node.to_s == op
       if node['class'] == 'name'

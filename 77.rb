@@ -21,11 +21,37 @@ body.css('.name a').each { |node| node.replace(node.children) }
 #change original posters signature class from name to op
 op = body.css(".name").first
 op = op.text
-body.css("span:contains('#{op}')").each { |node| 
-	if node['class'] == 'name'
-		node['class'] = 'op' 
-	end
+body.css("span:contains('#{op},')").each { |node| 
+  if node['class'] == 'posterinfo'
+    node.first_element_child['class'] = 'op' 
+  end
 }
+
+
+=begin
+body.css(".name").each { |node|
+if node == op
+  node['class'] = 'op' 
+end
+}
+
+
+#puts rando
+
+
+
+body.css(".name").each { |node|
+if node == op
+  puts node
+end
+}
+
+dude.each { |node| 
+  if node['class'] == 'name'
+    node['class'] = 'op' 
+  end
+}
+=end
 
 #impliment infos
 body.css(".op").each { |node| node.content = username}
@@ -51,11 +77,11 @@ titlelink = title.at_css(".site-title").inner_html.replace("<h1 class='site-titl
 
 #the head
 head = "<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' href='styles.css'>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='styles.css'>
   <script type='text/javascript' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-	<title>#{title.text}</title>
+  <title>#{title.text}</title>
 </head>"
 
 #jquery removes poster info from home page and link from title on post pages
@@ -67,10 +93,10 @@ rblog = body.css(".blog").reverse
 
 #generate the home page
 open('index.html', 'w') { |f|
-	f.puts head
-	f.puts title
-	f.puts subtitle
-	rblog.each { |node| f.puts node }
+  f.puts head
+  f.puts title
+  f.puts subtitle
+  rblog.each { |node| f.puts node }
   f.puts footer
   f.puts deinfo
 }
@@ -81,13 +107,13 @@ loop do
   blpost = body.xpath("//div[@class='blog'][#{blcount}]","//div[@class='blog'][#{blcount}]/following-sibling::div[@class='message'][1 = count(preceding-sibling::div[@class='blog'][#{blcount}] | (//div[@class='blog'])[1])]")
   break if blpost.length == 0
   blurl = blpost.at_css(".blog-title a").attr("href")
-  open( blurl, 'w') { |f| 	
-  	f.puts head
-  	f.puts titlelink
-  	f.puts subtitle
-  	f.puts blpost
+  open( blurl, 'w') { |f|   
+    f.puts head
+    f.puts titlelink
+    f.puts subtitle
+    f.puts blpost
     f.puts footer
-  	f.puts delink
+    f.puts delink
   }
   blcount += 1
 end

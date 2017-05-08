@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'nokogiri'
 require 'open-uri'
 
@@ -21,7 +22,7 @@ body.css('.name a').each { |node| node.replace(node.children) }
 #change original posters signature class from name to op
 op = body.css(".name").first
 op = op.text
-body.css("span:contains('#{op},')").each { |node| 
+body.css("span:contains('― #{op},')").each { |node| 
   if node['class'] == 'posterinfo'
     node.first_element_child['class'] = 'op' 
   end

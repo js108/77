@@ -1,0 +1,51 @@
+body {
+	max-width: 720px;
+	margin: auto;
+	padding: 20px 20px 60px;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	background: black;
+	color: white;
+}
+
+p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.site-title, .blog-title {
+	font-family: helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.site-title {
+	font-size: 2.5em;
+	margin: .2em 0;
+	border-bottom: 1px solid;
+}
+
+.blog-title {
+	font-size: 1em;
+	letter-spacing: 1em;
+	border-bottom: 1px solid;
+}
+
+.blog, .message {
+	margin-top: 80px;
+}
+
+p .posterinfo {
+	font-size: .7em;
+}
+
+.footer {
+	border-top: 1px solid;
+	margin-top: 60px;
+	padding-top: 10px;
+}

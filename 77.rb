@@ -31,29 +31,6 @@ all.each { |node|
   end
 }
 
-
-=begin
-if op.is_a? String 
-  puts "string"
-else
-  puts "not"
-end
-
-strop = op.to_s
-
-puts strop
-
-
-#change original posters signature class from name to op
-op = body.css(".name").first
-op = op.text
-body.css("span:contains('― #{op},')").each { |node| 
-  if node['class'] == 'posterinfo'
-    node.first_element_child['class'] = 'op' 
-  end
-}
-=end
-
 #impliment infos
 body.css(".op").each { |node| node.content = username}
 subtitle = "<div class='site-subtitle'>#{subtitletext}</div>"
